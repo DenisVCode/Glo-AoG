@@ -1,0 +1,30 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "actions-on-google": "^2.6.0",
+    "dialogflow": "^0.8.2",
+    "es6-promise": "^4.2.6",
+    "firebase-admin": "~7.0.0",
+    "firebase-functions": "^2.2.0",
+    "moment": "^2.24.0",
+    "remove-markdown": "^0.3.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "rxjs": "^6.4.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true
+}
